@@ -1,0 +1,53 @@
+/* src/components/Navbar/Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+/* Contenedor del logo y título */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-logo h1 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Lista de categorías */
+.listaCategorias {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.listaCategorias a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.listaCategorias a:hover {
+  color: #ddd;
+}
+
+/* Opcional: para alinear el carrito */
+.cart-widget {
+  margin-left: auto;
+}
