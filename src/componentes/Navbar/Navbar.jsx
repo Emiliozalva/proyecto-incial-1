@@ -1,7 +1,7 @@
 import React from 'react';
 import CartWidget from '../CartWidget/CartWidget';
 import './navbar.css';
-import ecomerce from '../../assets/ecomerce.png';
+import ecomerce from '../../assets/ecommerce.png';
 function Navbar(){
     
 

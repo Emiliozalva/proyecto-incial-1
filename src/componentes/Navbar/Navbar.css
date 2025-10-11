@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1e1e1e;
+  background-color: #1e1e1e; /* fondo oscuro */
   color: white;
   padding: 1rem 2rem;
 }
@@ -14,17 +14,23 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  background-color: #1e1e1e; /* mismo color que el navbar */
+  padding: 0.2rem 0.5rem; /* opcional, para separar un poco la imagen */
+  border-radius: 4px; /* opcional, estética */
 }
 
 .navbar-logo h1 {
   font-size: 1.4rem;
   margin: 0;
+  color: white;
 }
 
 .logo {
   width: 40px;
   height: 40px;
   object-fit: contain;
+  background-color: #1e1e1e; /* fondo oscuro detrás de la imagen */
+  border-radius: 4px; /* opcional, suaviza bordes */
 }
 
 /* Lista de categorías */
@@ -47,7 +53,7 @@
   color: #ddd;
 }
 
-/* Opcional: para alinear el carrito */
+/* Para alinear el carrito */
 .cart-widget {
   margin-left: auto;
 }
