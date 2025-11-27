@@ -1,0 +1,10 @@
+/* Contenedor de la lista de productos */
+.ListGroup {
+    display: flex;
+    flex-wrap: wrap; /* Permite que bajen si no entran */
+    justify-content: center; /* Centra los items */
+    gap: 2rem; /* Espacio entre tarjetas */
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}

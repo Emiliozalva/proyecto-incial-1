@@ -1,0 +1,93 @@
+/* Contenedor principal de la tarjeta de detalle */
+.CardItemDetail {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    max-width: 800px; /* Ancho máximo para que no se estire en pantallas grandes */
+    margin: 0 auto;   /* Centrado horizontal */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.HeaderDetail {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.ItemHeaderDetail {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+}
+
+/* Disposición flexible: Imagen a la izquierda, texto a la derecha (en PC) */
+.DetailContent {
+    display: flex;
+    flex-wrap: wrap; /* Para que en celular baje */
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.ItemImgDetail {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.InfoContainer {
+    flex: 1; /* Ocupa el espacio restante */
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.InfoDetail {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #555;
+}
+
+.InfoDetail.price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2ecc71; /* Un verde estilo precio */
+    margin-top: 10px;
+}
+
+.InfoDetail.category {
+    text-transform: capitalize;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Footer donde va el contador */
+.ItemFooterDetail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.OptionDetail {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.OptionDetail:hover {
+    background-color: #27ae60;
+}

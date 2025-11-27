@@ -1,22 +1,25 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom'; // <--- IMPORTANTE
 import CartWidget from '../CartWidget/CartWidget';
 import './navbar.css';
 import ecomerce from '../../assets/ecommerce.png';
-function Navbar(){
-    
 
+function Navbar(){
     return(
         <nav className="navbar">
-           { /** nombre y logo, recordar quitar  */}
-            <div className="navbar-logo">
-            <h1>Sitio de comercio Online</h1>
-            <img src={ecomerce} alt="Logo" className="logo"/>
-            </div>
+            
+            <Link to="/" className="navbar-logo">
+                <h1>Sitio de comercio Online</h1>
+                <img src={ecomerce} alt="Logo" className="logo"/>
+            </Link>
+
             <ul className="listaCategorias"> 
-                <li><a href="#">Perifericos</a></li>
-                <li><a href="#">Componentes</a></li>
-                <li><a href="#">Ofertas</a></li>
+                
+                <li><NavLink to="/category/perifericos">Perifericos</NavLink></li>
+                <li><NavLink to="/category/componentes">Componentes</NavLink></li>
+                <li><NavLink to="/category/monitores">Monitores</NavLink></li>
             </ul>
+            
             <CartWidget/>
         </nav>
     )

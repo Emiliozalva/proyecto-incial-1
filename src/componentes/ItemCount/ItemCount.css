@@ -1,0 +1,58 @@
+/* Contenedor principal del contador */
+.Counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espacio entre los controles y el botón de agregar */
+    margin-top: 15px;
+}
+
+/* Fila de los botones + y - */
+.Controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espacio entre el número y los botones */
+}
+
+/* El número central */
+.Number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    min-width: 30px; /* Para que no salte si pasa de 9 a 10 */
+    text-align: center;
+}
+
+/* Estilo base para los botones */
+.Button {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.Button:hover {
+    background-color: #555;
+}
+
+/* Estilo específico para el botón "Agregar al Carrito" */
+.AddButton {
+    background-color: #2ecc71; /* Verde */
+    width: 100%; /* Opcional: para que ocupe el ancho disponible */
+    font-weight: 600;
+}
+
+.AddButton:hover {
+    background-color: #27ae60;
+}
+
+/* Estado deshabilitado (cuando no hay stock) */
+.Button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
