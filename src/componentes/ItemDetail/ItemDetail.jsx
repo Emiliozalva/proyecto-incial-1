@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-// Asegúrate de tener el componente ItemCount creado
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 

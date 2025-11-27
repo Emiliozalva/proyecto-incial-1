@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-// Asegúrate de que esta ruta coincida con donde guardaste tu mock
-import { getProductById } from '../../data/asyncMock'; 
+import { getProductById } from '../../mock/AsyncService';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
 const ItemDetailContainer = () => {

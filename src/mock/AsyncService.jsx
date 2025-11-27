@@ -1,6 +1,3 @@
-
-
-
 const products = [
     {
         id: '1',
@@ -58,41 +55,26 @@ const products = [
     }
 ];
 
-// 1. Obtener todos los productos
 export const getProducts = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products);
-        }, 1000);
+        }, 500);
     });
 };
 
-// 2. Obtener productos por categoría
 export const getProductsByCategory = (categoryId) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products.filter(prod => prod.category === categoryId));
-        }, 1000);
+        }, 500);
     });
 };
 
-// 3. Obtener un producto por ID
 export const getProductById = (productId) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products.find(prod => prod.id === productId));
-        }, 1000);
-    });
-};
-
-// 4. NUEVA FUNCION: Obtener productos por Nombre (Buscador)
-export const getProductsByName = (searchTerm) => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            const productsFound = products.filter(prod => 
-                prod.name.toLowerCase().includes(searchTerm.toLowerCase())
-            );
-            resolve(productsFound);
-        }, 1000);
+        }, 500);
     });
 };
