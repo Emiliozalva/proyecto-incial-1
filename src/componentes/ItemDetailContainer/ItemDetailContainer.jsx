@@ -6,14 +6,10 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
-
-    // 1. Obtenemos el ID que viene en la URL (ej: /item/1)
     const { itemId } = useParams();
 
     useEffect(() => {
         setLoading(true);
-
-        // 2. Llamamos a la promesa del mock
         getProductById(itemId)
             .then(response => {
                 setProduct(response);
@@ -25,7 +21,7 @@ const ItemDetailContainer = () => {
                 setLoading(false);
             });
 
-    }, [itemId]); // Importante: se ejecuta cada vez que cambia el ID
+    }, [itemId]);
 
     return (
         <div style={{ padding: '2rem' }}>
