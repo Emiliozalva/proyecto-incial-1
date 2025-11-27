@@ -1,0 +1,95 @@
+/* Cuando está vacío */
+.CartEmpty {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.CartEmpty h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Contenedor principal */
+.CartContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cada item (fila) */
+.CartItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    background-color: white;
+}
+
+.CartItemImg {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.CartItemDetail {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.CartItemDetail h3 {
+    font-size: 1.1rem;
+    margin: 0 0 5px 0;
+}
+
+.CartItemDetail p {
+    margin: 2px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Botón de eliminar (X) */
+.ButtonRemove {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Sección del Total y Botones finales */
+.CartTotal {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.CartTotal h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.CartActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.ButtonClear {
+    background-color: #95a5a6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ButtonCheckout {
+    background-color: #2ecc71;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}

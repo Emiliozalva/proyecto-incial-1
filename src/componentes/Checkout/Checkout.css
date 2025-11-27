@@ -1,0 +1,52 @@
+.CheckoutContainer {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.OrderId {
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.CheckoutForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.CheckoutForm label {
+    font-weight: 600;
+    color: #555;
+}
+
+.CheckoutForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.ButtonCheckout {
+    margin-top: 10px;
+    background-color: #333;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+}
+
+.ButtonCheckout:hover {
+    background-color: #555;
+}

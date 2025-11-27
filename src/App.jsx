@@ -5,6 +5,7 @@ import Navbar from './componentes/Navbar/Navbar';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { CartProvider } from './Context/CartContext'; 
+import Cart from './componentes/Cart/Cart';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <Route path='/' element={<ItemListContainer greeting="Bienvenido a la Tienda" />} />
               <Route path='/category/:categoryId' element={<ItemListContainer greeting="Categoría seleccionada" />} />
               <Route path='/item/:itemId' element={<ItemDetailContainer />} />
+              <Route path='/cart' element={<Cart />} />
               <Route path='*' element={<h1>404 - Página no encontrada</h1>} />
             </Routes>
         </CartProvider>

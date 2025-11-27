@@ -1,0 +1,21 @@
+.ItemDetailContainer {
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alineado arriba */
+    min-height: 80vh;
+    background-color: #f9f9f9; /* Un fondo gris muy suave */
+}
+
+/* Estilos específicos para cuando hay error */
+.error-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #e74c3c;
+}
+
+.error-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}

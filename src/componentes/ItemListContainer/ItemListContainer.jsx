@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProductById, getProductsByCategory, getProducts } from '../../mock/AsyncService';
-import ItemList from '../ItemList/ItemList'; 
+import { getProducts, getProductsByCategory } from '../../mock/AsyncService'; 
+import ItemList from '../ItemList/ItemList';
+import Loader from '../Loader/Loader'; 
 import './ItemListContainer.css';
 
 const ItemListContainer = ({ greeting }) => {
@@ -12,6 +13,7 @@ const ItemListContainer = ({ greeting }) => {
 
     useEffect(() => {
         setLoading(true);
+
         const asyncFunc = categoryId ? getProductsByCategory : getProducts;
 
         asyncFunc(categoryId)
@@ -28,13 +30,9 @@ const ItemListContainer = ({ greeting }) => {
     }, [categoryId]);
 
     return (
-        <div className="item-list-container">
+        <div className="ItemListContainer">
             <h1>{greeting}</h1>
-            {loading ? (
-                <h2>Cargando productos...</h2>
-            ) : (
-                <ItemList products={products} />
-            )}
+            {loading ? <Loader /> : <ItemList products={products} />}
         </div>
     );
 };

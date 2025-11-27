@@ -1,15 +1,19 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProductById } from '../../mock/AsyncService';
+import { getProductById } from '../../mock/AsyncService'; 
 import ItemDetail from '../ItemDetail/ItemDetail';
+import Loader from '../Loader/Loader'; 
+import './ItemDetailContainer.css';
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
+
     const { itemId } = useParams();
 
     useEffect(() => {
         setLoading(true);
+
         getProductById(itemId)
             .then(response => {
                 setProduct(response);
@@ -22,16 +26,20 @@ const ItemDetailContainer = () => {
             });
 
     }, [itemId]);
-
-    return (
-        <div style={{ padding: '2rem' }}>
-            {loading ? (
-                <h1>Cargando detalle...</h1>
-            ) : product ? (
+    if(loading) {
+        return <Loader />;
+    }
+    if(product) {
+        return (
+            <div className='ItemDetailContainer'>
                 <ItemDetail {...product} />
-            ) : (
-                <h1>El producto no existe</h1>
-            )}
+            </div>
+        );
+    }
+    return (
+        <div className='ItemDetailContainer error-container'>
+            <h2>¡Ops! El producto no existe</h2>
+            <p>El ID que buscas no se encuentra en nuestra base de datos.</p>
         </div>
     );
 };
