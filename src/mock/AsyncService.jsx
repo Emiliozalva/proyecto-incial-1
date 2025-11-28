@@ -77,4 +77,13 @@ export const getProductById = (productId) => {
             resolve(products.find(prod => prod.id === productId));
         }, 500);
     });
+    
+};
+export const createOrder = (order) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const newOrderId = "ORD-" + Math.floor(Math.random() * 10000);
+            resolve(newOrderId);
+        }, 1000);
+    });
 };

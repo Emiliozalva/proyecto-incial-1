@@ -1,27 +1,21 @@
-import { useState, useContext } from 'react'; // 1. Importar useContext
+import { useState, useContext } from 'react'; 
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
-import { CartContext } from '../../context/CartContext'; // 2. Importar el Contexto
+import { CartContext } from '../../Context/CartContext'; 
 import './ItemDetail.css';
 
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
     const [quantityAdded, setQuantityAdded] = useState(0);
-
-    // 3. Traemos la función addItem del contexto
     const { addItem } = useContext(CartContext);
 
     const handleOnAdd = (quantity) => {
         setQuantityAdded(quantity);
-
-        // 4. Armamos el objeto del producto que vamos a guardar
         const item = {
             id, 
             name, 
             price,
-            img // Opcional, sirve para mostrar la foto en el carrito después
+            img 
         };
-
-        // 5. Ejecutamos la función del contexto
         addItem(item, quantity);
     };
 

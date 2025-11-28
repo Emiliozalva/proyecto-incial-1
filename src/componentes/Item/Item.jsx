@@ -22,7 +22,6 @@ const Item = ({ id, name, img, price, stock }) => {
                 </p>
             </section>
             <footer className="ItemFooter" style={{ marginTop: '10px' }}>
-                {/* ESTE LINK ES LA CLAVE DE LA NAVEGACIÓN */}
                 <Link to={`/item/${id}`} className="Option" style={{ backgroundColor: '#333', color: 'white', padding: '8px 15px', borderRadius: '5px', textDecoration: 'none' }}>
                     Ver detalle
                 </Link>
