@@ -1,16 +1,45 @@
-# React + Vite
+# Tienda Gamer - Proyecto Final React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un E-commerce de productos tecnológicos (Hardware y Periféricos) desarrollado como proyecto final para el curso de React JS.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Navegación:** Menú con categorías (Periféricos, Componentes, Monitores) usando React Router.
+* **Catálogo:** Visualización de productos traídos dinámicamente desde Firebase (Firestore).
+* **Detalle de Producto:** Vista individual con descripción, precio y control de stock.
+* **Carrito de Compras:** Lógica completa para agregar items, eliminar y ver el total (usando Context API).
+* **Checkout:** Formulario de compra que valida datos, guarda la orden en Firebase y devuelve un ID de seguimiento.
+* **Feedback Visual:** Uso de Loaders para tiempos de carga y SweetAlert2 para notificaciones.
 
-## React Compiler
+## 🛠️ Tecnologías utilizadas
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+* React JS (Vite)
+* Firebase (Firestore Database)
+* React Router DOM
+* SweetAlert2
+* CSS3
 
-## Expanding the ESLint configuration
+## 📦 Instalación y Uso
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone [PEGA_AQUI_EL_LINK_DE_TU_GITHUB]
+    ```
+
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
+
+3.  **Iniciar el proyecto:**
+    ```bash
+    npm run dev
+    ```
+
+## ⚙️ Configuración
+
+El proyecto utiliza Firebase. Las credenciales de la base de datos se encuentran configuradas en `src/service/firebase.jsx`.
+
+---
+**Alumno:** Emilio
+**Curso:** React JS - Coderhouse
