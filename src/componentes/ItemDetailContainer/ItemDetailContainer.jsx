@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProductById } from '../../mock/AsyncService'; 
+import { getProductById } from '../../service/firestoreFunctions';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import Loader from '../Loader/Loader'; 
 import './ItemDetailContainer.css';

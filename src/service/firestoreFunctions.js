@@ -44,6 +44,23 @@ export const getProductById = (itemId) => {
             .catch((error) => reject(error));
     });
 };
+export const getProductsByCategory = (categoryId) => {
+    return new Promise((resolve, reject) => {
+        const collectionRef = collection(db, 'products');
+
+        // Creamos la query para filtrar donde el campo 'category' sea igual al categoryId
+        const q = query(collectionRef, where('category', '==', categoryId));
+
+        getDocs(q)
+            .then((response) => {
+                const productsAdapted = response.docs.map((doc) => {
+                    return { id: doc.id, ...doc.data() };
+                });
+                resolve(productsAdapted);
+            })
+            .catch((error) => reject(error));
+    });
+};
 export const createOrder = (order) => {
     const collectionRef = collection(db, 'orders');
     const orderWithDate = {

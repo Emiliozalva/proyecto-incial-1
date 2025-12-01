@@ -1,7 +1,5 @@
 import { useState, useContext } from 'react';
-import { CartContext } from '../../Context/CartContext'; 
-//import { createOrder } from '../../mock/AsyncService';
-
+import { CartContext } from '../../Context/CartContext';
 import { createOrder } from '../../service/firestoreFunctions';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'; 
